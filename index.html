@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocioStudy — Социометрично изследване на класа</title>
+  <meta name="description" content="Configure classroom sociometric studies, collect peer nominations through a QR questionnaire, and analyze class relationships with indexes, charts and sociograms.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='9' cy='8' r='4' fill='%234f46e5'/%3E%3Ccircle cx='23' cy='10' r='4' fill='%2316a34a'/%3E%3Ccircle cx='16' cy='24' r='4' fill='%23db2777'/%3E%3Cpath d='M12 10l8 1M11 11l4 11M21 13l-5 11' stroke='%234f46e5' stroke-width='2'/%3E%3C/svg%3E">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" id="appHeader">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="6.5" cy="6.5" r="2.6"/><circle cx="17.5" cy="7.5" r="2.6"/><circle cx="12" cy="17.5" r="2.6"/>
+            <path d="M8.8 7.4l6.6.8M7.4 8.8l4 6.2M17 9.8l-4.2 5.6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">SocioStudy</div>
+          <div class="brand-sub" data-i18n="brand.sub">Classroom sociometry</div>
+        </div>
+      </div>
+      <nav class="tabs" id="mainNav" aria-label="Main navigation">
+        <button class="tab" data-view="setup" data-i18n="tab.setup">Setup</button>
+        <button class="tab" data-view="qr" data-i18n="tab.qr">Questionnaire &amp; QR</button>
+        <button class="tab" data-view="table" data-i18n="tab.table">Data Table</button>
+        <button class="tab" data-view="analysis" data-i18n="tab.analysis">Analysis</button>
+        <button class="tab" data-view="charts" data-i18n="tab.charts">Charts</button>
+        <button class="tab" data-view="sociogram" data-i18n="tab.sociogram">Sociogram</button>
+        <button class="tab" data-view="data" data-i18n="tab.data">Data</button>
+      </nav>
+      <button class="lang-toggle" id="langToggle" title="Switch to English" aria-label="Switch to English">EN</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Toggle theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="storage-note" id="storageNote" hidden>
+    <span data-i18n="storageNote">Saving is not available in this browser mode (for example private browsing), so your data will be lost when you close the page. Use “Export everything (ZIP)” to keep a copy.</span>
+  </div>
+
+  <main id="main">
+    <section id="view-setup" class="view" aria-label="Setup"></section>
+    <section id="view-qr" class="view" aria-label="Questionnaire and QR code"></section>
+    <section id="view-table" class="view" aria-label="Data table"></section>
+    <section id="view-analysis" class="view" aria-label="Analysis"></section>
+    <section id="view-charts" class="view" aria-label="Charts"></section>
+    <section id="view-sociogram" class="view" aria-label="Sociogram"></section>
+    <section id="view-data" class="view" aria-label="Data management"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/qrcode.js"></script>
+  <script src="vendor/chart.umd.js"></script>
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/jszip.min.js"></script>
+
+  <script src="shared.js"></script>
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="analysis.js"></script>
+  <script src="tables.js"></script>
+  <script src="charts.js"></script>
+  <script src="sociogram.js"></script>
+  <script src="export.js"></script>
+  <script src="kidform.js"></script>
+  <script src="qr.js"></script>
+  <script src="sync.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

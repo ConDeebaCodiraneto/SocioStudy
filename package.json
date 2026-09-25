@@ -1,0 +1,10 @@
+{
+  "name": "sociostudy",
+  "version": "1.0.0",
+  "description": "Classroom sociometric study with a QR-code questionnaire for students",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

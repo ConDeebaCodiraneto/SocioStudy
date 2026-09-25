@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: sociostudy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    # No persistent disk on the free plan: data/ resets whenever the service
+    # restarts (idle sleep, redeploys, host maintenance). Upgrade to a paid
+    # plan and add a `disk:` block here if collected answers must survive that.
+    envVars:
+      - key: TRUST_PROXY
+        value: "1"
+      - key: TEACHER_PASSWORD
+        sync: false
+      - key: SESSION_TTL_DAYS
+        value: "30"

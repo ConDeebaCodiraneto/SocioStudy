@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>SocioStudy — вход</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f4f1ec; color: #1c1a2e;
+    display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 24px; }
+  .card { background: #fff; border: 1px solid #e4ddd2; border-radius: 16px; padding: 32px; width: 100%; max-width: 360px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  p { color: #6b6b7a; font-size: 14px; margin: 0 0 20px; }
+  label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  input { width: 100%; box-sizing: border-box; padding: 11px 12px; border: 1px solid #d8d2c6; border-radius: 10px;
+    font-size: 16px; margin-bottom: 14px; }
+  button { width: 100%; padding: 11px; border: none; border-radius: 10px; background: #4f46e5; color: #fff;
+    font-size: 15px; font-weight: 600; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: default; }
+  .err { color: #b91c1c; font-size: 13px; min-height: 18px; margin: -4px 0 12px; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #14131f; color: #e9e7f5; }
+    .card { background: #1c1a2e; border-color: #2c2a42; }
+    p { color: #a3a0b8; }
+    input { background: #14131f; border-color: #35324a; color: #e9e7f5; }
+  }
+</style>
+</head>
+<body>
+  <form class="card" id="f" method="post" action="javascript:void(0)" autocomplete="off">
+    <h1>SocioStudy — учителски достъп</h1>
+    <p>Въведете паролата, зададена от администратора на този сайт.</p>
+    <label for="pw">Парола</label>
+    <input id="pw" name="password" type="password" autocomplete="current-password" autofocus required>
+    <div class="err" id="err"></div>
+    <button id="go" type="submit">Вход</button>
+  </form>
+  <script src="/login.js"></script>
+</body>
+</html>
