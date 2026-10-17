@@ -532,3 +532,12 @@ body.kid-mode main { max-width: 980px; padding-bottom: var(--space-16); }
 #an-table th { white-space: normal; line-height: 1.25; vertical-align: bottom; }
 #an-table th, #an-table td { padding-inline: var(--space-3); }
 #an-table td:last-child { white-space: normal; min-width: 150px; }
+
+/* ---------- Footer (links to Copyright / Privacy pages) ---------- */
+.app-footer {
+  max-width: 1240px; margin: 0 auto; padding: var(--space-6) var(--space-5) var(--space-10);
+  display: flex; justify-content: center; gap: var(--space-3);
+  font-size: var(--text-xs); color: var(--ink-faint);
+}
+.app-footer a { color: var(--ink-muted); text-decoration: none; }
+.app-footer a:hover { color: var(--ink); text-decoration: underline; }

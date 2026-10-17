@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>SocioStudy — поверителност</title>
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .legal-wrap { max-width: 720px; margin: 0 auto; padding: var(--space-10) var(--space-5) var(--space-16); }
+  .legal-wrap h1 { margin-bottom: var(--space-2); }
+  .legal-wrap .updated { color: var(--ink-muted); font-size: var(--text-sm); margin-bottom: var(--space-8); }
+  .legal-wrap section { margin-bottom: var(--space-8); }
+  .legal-wrap h2 { font-size: var(--text-lg); margin-bottom: var(--space-3); }
+  .legal-wrap p { max-width: 68ch; line-height: 1.6; margin-bottom: var(--space-3); }
+  .legal-wrap ul { max-width: 68ch; line-height: 1.6; padding-left: 1.3em; margin-bottom: var(--space-3); }
+  .legal-wrap ul li { margin-bottom: var(--space-2); }
+  .back-link { display: inline-flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); color: var(--ink-muted); text-decoration: none; font-size: var(--text-sm); }
+  .back-link:hover { color: var(--ink); }
+  .lang-switch { position: fixed; top: var(--space-5); right: var(--space-5); }
+</style>
+</head>
+<body data-title-key="legal.titleTagPrivacy">
+  <button class="lang-toggle lang-switch" id="langToggle" title="Switch to English" aria-label="Switch to English">EN</button>
+  <div class="legal-wrap">
+    <a href="/" class="back-link">← <span data-i18n="legal.backToApp">Back to SocioStudy</span></a>
+    <h1 data-i18n="legal.privacyTitle">Privacy Policy &amp; Disclaimer</h1>
+    <p class="updated" data-i18n="legal.lastUpdated">Last updated: October 2026</p>
+
+    <div class="notice warn">
+      <p class="small" data-i18n-html="legal.notClinical"></p>
+    </div>
+
+    <section>
+      <h2 data-i18n="legal.whatDataH">What data this website collects</h2>
+      <p data-i18n="legal.whatDataBody"></p>
+    </section>
+
+    <section>
+      <h2 data-i18n="legal.whereStoredH">Where that data is actually stored</h2>
+      <p data-i18n="legal.whereStoredIntro"></p>
+      <ul>
+        <li data-i18n-html="legal.whereStoredLocal"></li>
+        <li data-i18n-html="legal.whereStoredServer"></li>
+      </ul>
+      <p data-i18n="legal.whoCanSee"></p>
+    </section>
+
+    <section>
+      <h2 data-i18n="legal.retentionH">How long data is kept, and deletion</h2>
+      <ul>
+        <li data-i18n="legal.retentionManual"></li>
+        <li data-i18n="legal.retentionAuto"></li>
+        <li data-i18n-html="legal.retentionPilot"></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="legal.noTrackingH">No tracking, no advertising</h2>
+      <p data-i18n="legal.noTrackingBody"></p>
+    </section>
+
+    <section>
+      <h2 data-i18n="legal.responsibilityH">Consent and your responsibility as a teacher</h2>
+      <p data-i18n="legal.responsibilityBody"></p>
+    </section>
+
+    <p class="tiny muted" data-i18n-html="legal.seeCopyright"></p>
+  </div>
+
+  <script src="/shared.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/legal.js"></script>
+</body>
+</html>

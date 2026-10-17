@@ -58,7 +58,7 @@ const TYPES = {
 const PUBLIC_FILES = {
   '/styles.css': 'styles.css', '/shared.js': 'shared.js', '/i18n.js': 'i18n.js',
   '/kidform.js': 'kidform.js', '/kid.js': 'kid.js', '/robots.txt': 'robots.txt',
-  '/login.js': 'login.js',
+  '/login.js': 'login.js', '/legal.js': 'legal.js',
 };
 // The teacher app — behind the teacher password when one is set.
 const TEACHER_FILES = {
@@ -472,6 +472,11 @@ function serveFile(req, res, file, cacheControl) {
 
 function handleStatic(req, res, p, ip) {
   if (p === '/healthz') return sendText(res, 200, 'ok');
+  // Copyright and privacy pages are intentionally public (no login needed):
+  // parents, students, or school administrators should be able to read them
+  // without a teacher account.
+  if (p === '/copyright') return serveFile(req, res, 'copyright.html', 'no-cache');
+  if (p === '/privacy') return serveFile(req, res, 'privacy.html', 'no-cache');
   if (p === '/login') {
     if (!TEACHER_PASSWORD || teacherAuthOk(req)) {
       res.writeHead(302, baseHeaders({ Location: '/', 'Cache-Control': 'no-store' }));
